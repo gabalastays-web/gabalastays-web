@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Gabala Stays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/index.html">Gabala <span>Stays</span></a>
+      <nav class="nav">
+        <a data-i18n="nav.home" href="/index.html">Home</a>
+        <a data-i18n="nav.houses" href="/properties.html">All Houses</a>
+        <a data-i18n="nav.contact" href="/contact.html" class="active btn btn-sm">Contact</a>
+        <select id="langSwitcher" aria-label="Language" class="lang-select">
+          <option value="az">AZ</option>
+          <option value="en" selected>EN</option>
+          <option value="ru">RU</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <h1 data-i18n="contact.title">Contact us</h1>
+        <p data-i18n="contact.hours">We usually reply within minutes between 08:00–23:00 (AZT).</p>
+        <ul class="contact-list">
+          <li>📞 <a href="tel:+994500000000">+994 50 000 00 00</a></li>
+          <li>💬 <a id="waLink" href="#">WhatsApp</a></li>
+          <li>✉️ <a href="mailto:hello@gabalastays.az">hello@gabalastays.az</a></li>
+          <li>📍 Qəbələ, Azerbaijan</li>
+        </ul>
+
+        <h2 data-i18n="contact.quick">Quick request</h2>
+        <form id="requestForm" class="form">
+          <label>
+            <span data-i18n="contact.name">Your name</span>
+            <input name="name" required data-i18n="contact.name" data-i18n-attr="placeholder" placeholder="Your name" />
+          </label>
+          <label>
+            <span data-i18n="contact.dates">Dates</span>
+            <input name="dates" placeholder="20–23 Aug" required data-i18n="contact.dates_ph" data-i18n-attr="placeholder" />
+          </label>
+          <label>
+            <span data-i18n="contact.guests">Guests</span>
+            <input name="guests" type="number" min="1" required />
+          </label>
+          <label>
+            <span data-i18n="contact.notes">Notes</span>
+            <textarea name="notes" data-i18n="contact.notes_ph" data-i18n-attr="placeholder" placeholder="Need baby bed, near Tufandağ…"></textarea>
+          </label>
+          <button class="btn" type="submit" data-i18n="contact.send_wa">Send via WhatsApp</button>
+        </form>
+      </div>
+      <div>
+        <div class="map-embed">
+          <iframe title="Gabala" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60523.53370755701!2d47.819!3d40.983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403fa3b6a0d7f1fd%3A0x30c9c0e7b6c7c6b9!2sQabala!5e0!3m2!1sen!2saz!4v1690000000000">
+          </iframe>
+        </div>
+        <p class="muted" data-i18n="contact.map_note">* Map shows the general area. Exact address is shared after booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Gabala Stays</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/994500000000?text=Hello%20Gabala%20Stays!" class="floating-wa" aria-label="Chat on WhatsApp">WA</a>
+  <script src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

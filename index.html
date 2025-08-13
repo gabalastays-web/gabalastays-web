@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabala Stays • Mountain Houses for Rent</title>
+  <meta name="description" content="Cozy houses for rent in Qəbələ (Gabala), Azerbaijan. Family-friendly, nature views, easy booking via WhatsApp or phone." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/assets/favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/index.html">Gabala <span>Stays</span></a>
+      <nav class="nav">
+        <a data-i18n="nav.home" href="/index.html" class="active">Home</a>
+        <a data-i18n="nav.houses" href="/properties.html">All Houses</a>
+        <a data-i18n="nav.contact" href="/contact.html" class="btn btn-sm">Contact</a>
+        <select id="langSwitcher" aria-label="Language" class="lang-select">
+          <option value="az">AZ</option>
+          <option value="en" selected>EN</option>
+          <option value="ru">RU</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 data-i18n="home.hero_title">Cozy houses in <span>Gabala</span></h1>
+        <p data-i18n="home.hero_sub">Safe, clean, family-friendly stays with local support.</p>
+        <div class="hero-actions">
+          <a class="btn" href="/properties.html" data-i18n="home.cta">See All Houses</a>
+          <a class="btn btn-ghost" href="/contact.html" data-i18n="home.cta_contact">Call / WhatsApp</a>
+        </div>
+        <ul class="badges">
+          <li data-i18n="badges.wifi">✔️ Free Wi-Fi</li>
+          <li data-i18n="badges.parking">✔️ Parking</li>
+          <li data-i18n="badges.ac">✔️ Heating & A/C</li>
+          <li data-i18n="badges.support">✔️ 24/7 Support</li>
+        </ul>
+      </div>
+      <div class="hero-media">
+        <img src="/assets/PageMain.jpeg" alt="Main page photo of Gabala house" />
+      </div>      
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2 data-i18n="about.title">About us</h2>
+        <p data-i18n="about.p1">We are a small family business from Qəbələ. We manage comfortable houses with mountain and forest views. We speak Azeri, Turkish and English.</p>
+        <p data-i18n="about.p2">No hidden fees. Fast response. Local tips for activities (Nohur Lake, Tufandağ, Seven Beauties Waterfall, rafting and more).</p>
+      </div>
+      <div>
+        <img class="rounded" src="/assets/AboutUs.jpeg" alt="Family-run rentals in Gabala" />
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section section-muted">
+    <div class="container">
+      <h2 data-i18n="why.title">Why book with us</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="why.direct_title">Direct booking</h3>
+          <p data-i18n="why.direct_desc">Talk directly with us on WhatsApp for the best price and flexible check-in.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="why.clean_title">Clean & comfy</h3>
+          <p data-i18n="why.clean_desc">Fresh linens, full kitchens and reliable heating/air conditioning.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="why.location_title">Great locations</h3>
+          <p data-i18n="why.location_desc">Close to Tufandağ, Nohur Lake and city center. Parking included.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="why.support_title">Local support</h3>
+          <p data-i18n="why.support_desc">We help with airport transfers, activities and restaurant reservations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 data-i18n="home.featured">Featured houses</h2>
+      <div id="featured" class="cards cards-3"></div>
+      <div class="center mt-20"><a class="btn" href="/properties.html" data-i18n="home.cta">See all houses</a></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="/index.html">Gabala <span>Stays</span></a>
+        <p>Qəbələ, Azerbaijan</p>
+      </div>
+      <div>
+        <p><strong data-i18n="footer.phone_label">Phone/WhatsApp:</strong> <a href="tel:+994555235757">+994 55 523 57 57</a></p>
+        <p><strong data-i18n="footer.email_label">Email:</strong> <a href="mailto:hello@gabalastays.az">hello@gabalastays.az</a></p>
+      </div>
+      <div>
+        <a class="btn btn-sm" href="/contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/994555235757?text=Hello%20Gabala%20Stays!" class="floating-wa" aria-label="Chat on WhatsApp">WA</a>
+  <script src="/i18n.js"></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

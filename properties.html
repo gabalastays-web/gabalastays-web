@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Houses • Gabala Stays</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-o9N1jG8mPQbU1bG9m5YkLgpCjwk2+YXm1gY2XJZ2oEY="
+    crossorigin=""
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Gabala <span>Stays</span></a>
+      <nav class="nav">
+        <a data-i18n="nav.home" href="index.html">Ana səhifə</a>
+        <a data-i18n="nav.houses" href="properties.html" class="active">Bütün evlər</a>
+        <a data-i18n="nav.contact" href="contact.html" class="btn btn-sm">Əlaqə</a>
+        <select id="langSwitcher" aria-label="Language" class="lang-select">
+          <option value="az">AZ</option>
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 data-i18n="list.title">Kirayə evlər</h1>
+
+      <!-- Filters -->
+      <form id="filters" class="filters">
+        <label>
+          <span data-i18n="list.filter_guests">Qonaq sayı</span>
+          <select name="guests">
+            <option value=""></option>
+            <option>2</option><option>4</option><option>6</option><option>8</option><option>10+</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="list.filter_rooms">Rooms</span>
+          <select name="rooms">
+            <option value=""></option>
+            <option>1</option><option>2</option><option>3</option><option>4+</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="list.filter_min_price">Min price</span>
+          <input type="number" name="minPrice" placeholder="e.g. 80" data-i18n="list.filter_min_price" data-i18n-attr="placeholder" />
+        </label>
+
+        <label>
+          <span data-i18n="list.filter_price">Maks. qiymət</span>
+          <input type="number" name="maxPrice" placeholder="e.g. 250" data-i18n="list.filter_price_ph" data-i18n-attr="placeholder" />
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="withSauna" />
+          <span data-i18n="list.filter_sauna">Sauna</span>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="withPool" />
+          <span data-i18n="list.filter_pool">Hovuz</span>
+        </label>
+
+        <button class="btn" type="submit" data-i18n="list.filters">Filterlər</button>
+        <button class="btn btn-ghost" type="reset" data-i18n="common.clear">Təmizlə</button>
+      </form>
+
+      <!-- Split layout: list + map -->
+      <div class="search-layout">
+        <div class="results">
+          <div id="list" class="cards cards-2 cards-3"></div>
+          <p id="noResults" class="muted" style="display:none" data-i18n="list.no_results">Uyğun ev tapılmadı</p>
+        </div>
+
+        <aside class="map-wrap">
+          <div id="map"></div>
+          <button id="mapSearchBtn" class="btn btn-ghost btn-sm" style="margin-top:8px" data-i18n="list.search_this_area">Bu ərazidə axtar</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Gabala Stays</p>
+      <a class="btn btn-sm" href="contact.html" data-i18n="nav.contact">Əlaqə</a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/994500000000?text=Hello%20Gabala%20Stays!" class="floating-wa" aria-label="Chat on WhatsApp">WA</a>
+
+  <script src="i18n.js"></script>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-oQWQeEN6TwsyYfZPz7SgDg9H2wSk8SGc1Gf2Z8H3Lh0="
+    crossorigin=""
+  ></script>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
