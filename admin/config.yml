@@ -1,9 +1,11 @@
 backend:
-  name: git-gateway
-  branch: main  # Change if your default branch is different
+  name: github
+  repo: gabalastays-web/gabalastays.com
+  branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
+
 
 collections:
   - label: "Site Data"
