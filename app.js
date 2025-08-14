@@ -411,7 +411,7 @@ function toCard(p){
    - Shows on all environments; change SHOW_ALWAYS to false if you want localhost-only.
 */
 function addAdminButton() {
-  const SHOW_ALWAYS = true;
+  const SHOW_ALWAYS = false;
   if (!SHOW_ALWAYS) {
     const isLocal = /localhost|127\.0\.0\.1/.test(location.hostname);
     if (!isLocal) return;
