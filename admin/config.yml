@@ -1,19 +1,13 @@
-backend: {
-  name: 'github',
-  repo: 'gabalastays-web/gabalastays-web',
-  branch: 'main',
+backend:
+  # If you're hosting on Netlify and want the simplest flow, use git-gateway:
+  name: git-gateway
+  branch: main
 
-  // Force Netlify's OAuth authorize endpoint with your site id
-  base_url: 'https://api.netlify.com',
-  auth_endpoint: 'oauth/authorize?provider=github&site_id=76eb595e-b331-45e8-a815-509a2c956992',
+# Optional but recommended so CMS builds correct links
+site_url: https://gabalastays.com
 
-  // Optional, safe to keep:
-  site_domain: 'spiffy-meerkat-dcf5e1.netlify.app'
-},
-
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "assets"          # where uploaded images go in the repo
+public_folder: "/assets"        # how the site will reference them
 
 
 
