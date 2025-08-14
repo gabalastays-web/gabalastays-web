@@ -4,9 +4,82 @@
   <meta charset="utf-8">
   <title>Admin • Gabala Stays</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css">
+  <link rel="stylesheet"
+        href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css">
 </head>
 <body>
+  <!-- Tell Decap we will pass config manually (no YAML fetch) -->
+  <script>window.CMS_MANUAL_INIT = true;</script>
+
+  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Initialize CMS with explicit GitHub OAuth via Netlify
+    CMS.init({
+      config: {
+        load_config_file: false, // don't fetch /admin/config.yml
+        backend: {
+          name: 'github',
+          repo: 'gabalastays-web/gabalastays-web',
+          branch: 'main',
+          base_url: 'https://api.netlify.com',
+          auth_endpoint: 'oauth/authorize',   // important
+          site_id: '76eb595e-b331-45e8-a815-509a2c956992', // your Site ID
+          site_domain: 'spiffy-meerkat-dcf5e1.netlify.app' // your Netlify subdomain
+        },
+        media_folder: 'assets/uploads',
+        public_folder: '/assets/uploads',
+
+        // your collections – mirror what you had in config.yml:
+        collections: [
+          {
+            label: 'Site Data',
+            name: 'site',
+            files: [
+              {
+                label: 'Properties',
+                name: 'properties',
+                file: 'data/properties.json',
+                fields: [
+                  { label: 'Properties', name: 'properties', widget: 'list', summary: '{{fields.name}} ({{fields.location}})', fields: [
+                    { label: 'ID (slug)', name: 'id', widget: 'string' },
+                    { label: 'Name', name: 'name', widget: 'string' },
+                    { label: 'Location', name: 'location', widget: 'string' },
+                    { label: 'Price (AZN/night)', name: 'price', widget: 'number', value_type: 'int' },
+                    { label: 'Guests', name: 'guests', widget: 'number', value_type: 'int' },
+                    { label: 'Rooms (bedrooms)', name: 'rooms', widget: 'number', value_type: 'int' },
+                    { label: 'Beds', name: 'beds', widget: 'number', value_type: 'int' },
+                    { label: 'Baths', name: 'baths', widget: 'number', value_type: 'int' },
+                    { label: 'Pool', name: 'pool', widget: 'boolean', default: false },
+                    { label: 'Sauna', name: 'sauna', widget: 'boolean', default: false },
+                    { label: 'Wi-Fi', name: 'wifi', widget: 'boolean', default: true },
+                    { label: 'A/C', name: 'ac', widget: 'boolean', default: true },
+                    { label: 'Coordinates', name: 'coords', widget: 'object', fields: [
+                      { label: 'Latitude', name: 'lat', widget: 'number', value_type: 'float' },
+                      { label: 'Longitude', name: 'lng', widget: 'number', value_type: 'float' }
+                    ]},
+                    { label: 'Images', name: 'images', widget: 'list', field: { label: 'Image', name: 'image', widget: 'image' } },
+                    { label: 'Description', name: 'description', widget: 'object', fields: [
+                      { label: 'Azerbaijani', name: 'az', widget: 'text' },
+                      { label: 'English', name: 'en', widget: 'text' },
+                      { label: 'Russian', name: 'ru', widget: 'text' }
+                    ]},
+                    { label: 'Features', name: 'features', widget: 'object', fields: [
+                      { label: 'AZ', name: 'az', widget: 'list', field: { label: 'Item', name: 'item', widget: 'string' } },
+                      { label: 'EN', name: 'en', widget: 'list', field: { label: 'Item', name: 'item', widget: 'string' } },
+                      { label: 'RU', name: 'ru', widget: 'list', field: { label: 'Item', name: 'item', widget: 'string' } }
+                    ]},
+                    { label: 'Amenities (free text badges)', name: 'amenities', widget: 'list', field: { label: 'Amenity', name: 'amenity', widget: 'string' } },
+                    { label: 'Active (show on site)', name: 'active', widget: 'boolean', default: true }
+                  ] }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
