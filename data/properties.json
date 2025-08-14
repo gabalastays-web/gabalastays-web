@@ -1,0 +1,82 @@
+{
+    "properties": [
+      {
+        "id": "pine-villa",
+        "name": "Secluded Mountain Villa in Gabala",
+        "location": "Gabala",
+        "price": 230,
+        "guests": 9,
+        "rooms": 3,
+        "beds": 5,
+        "baths": 3,
+        "pool": true,
+        "sauna": false,
+        "wifi": true,
+        "ac": true,
+        "coords": { "lat": 40.99551, "lng": 47.85731 },
+        "images": [
+          "assets/EV1_1.jpeg","assets/EV1_2.jpeg","assets/EV1_3.jpeg","assets/EV1_4.jpeg","assets/EV1_5.jpeg",
+          "assets/EV1_6.jpeg","assets/EV1_7.jpeg","assets/EV1_8.jpeg","assets/EV1_9.jpeg","assets/EV1_10.jpeg",
+          "assets/EV1_11.jpeg","assets/EV1_12.jpeg","assets/EV1_13.jpeg","assets/EV1_14.jpeg","assets/EV1_15.jpeg",
+          "assets/EV1_16.jpeg","assets/EV1_17.jpeg","assets/EV1_18.jpeg","assets/EV1_19.jpeg","assets/EV1_20.jpeg",
+          "assets/EV1_21.jpeg"
+        ],
+        "description": {
+          "az": "Bu şəxsi villa 9 nəfərə qədər yerləşmə imkanı təqdim edir, 3 yataq otağı, hovuz, manqallı açıq mətbəx, Wi-Fi, kondisioner və televizorlarla təchiz olunub.",
+          "en": "This private villa sleeps up to 9 guests, featuring 3 bedrooms, a pool, outdoor kitchen with BBQ, Wi-Fi, AC, and TVs.",
+          "ru": "Эта частная вилла вмещает до 9 гостей, имеет 3 спальни, бассейн, летнюю кухню с барбекю, Wi-Fi, кондиционер и телевизоры."
+        },
+        "features": {
+          "az": [
+            "Yataq otaqları: 3",
+            "Qonaq otağı: 1 (TV ilə)",
+            "Mətbəx: Tam təchiz olunmuş",
+            "Yerləşmə: 7 nəfər + 2 açılan çarpayı (cəmi 9 qonaq)",
+            "Sanitar qovşaqlar: 2 tualet + 1 hamam",
+            "Bütün otaqlarda kondisioner",
+            "Mətbəxdə də TV",
+            "Wi-Fi",
+            "Şəxsi isidilən hovuz (6×4 m)",
+            "Ayrı açıq mətbəx və manqal zonası",
+            "Dincəlmək üçün geniş həyət"
+          ],
+          "en": [
+            "Bedrooms: 3",
+            "Living room: 1 (with TV)",
+            "Kitchen: Fully equipped",
+            "Sleeps 7 + 2 fold-out beds (total 9 guests)",
+            "Bathrooms: 2 toilets + 1 full bathroom",
+            "Air conditioning in all rooms",
+            "TV in the kitchen as well",
+            "Wi-Fi",
+            "Private heated pool (6×4 m)",
+            "Separate outdoor kitchen & BBQ area",
+            "Spacious yard for relaxation"
+          ],
+          "ru": [
+            "Спален: 3",
+            "Гостиная: 1 (с ТВ)",
+            "Кухня: полностью оборудована",
+            "Размещение: 7 + 2 раскладных (всего 9 гостей)",
+            "Санузлы: 2 туалета + 1 ванная",
+            "Кондиционер во всех комнатах",
+            "ТВ также на кухне",
+            "Wi-Fi",
+            "Частный подогреваемый бассейн (6×4 м)",
+            "Отдельная летняя кухня и барбекю-зона",
+            "Просторный двор для отдыха"
+          ]
+        },
+        "amenities": [
+          "Free Wi-Fi",
+          "Parking",
+          "BBQ",
+          "Heating & A/C",
+          "Fully Equipped Kitchen",
+          "Washing machine"
+        ],
+        "active": true
+      }
+    ]
+  }
+  
