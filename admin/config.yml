@@ -1,11 +1,15 @@
-backend:
-  name: github
-  repo: gabalastays-web/gabalastays-web
-  branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: oauth
-  site_id: 76eb595e-b331-45e8-a815-509a2c956992
-  site_domain: gabalastays.netlify.app
+backend: {
+  name: 'github',
+  repo: 'gabalastays-web/gabalastays-web',
+  branch: 'main',
+
+  // Force Netlify's OAuth authorize endpoint with your site id
+  base_url: 'https://api.netlify.com',
+  auth_endpoint: 'oauth/authorize?provider=github&site_id=76eb595e-b331-45e8-a815-509a2c956992',
+
+  // Optional, safe to keep:
+  site_domain: 'spiffy-meerkat-dcf5e1.netlify.app'
+},
 
 
 media_folder: "assets/uploads"
