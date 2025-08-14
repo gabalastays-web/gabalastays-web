@@ -4,7 +4,9 @@ backend:
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: oauth
-  site_id: 76eb595e-b331-45e8-a815-509a2c956992  # <-- your Netlify Site ID
+  site_id: 76eb595e-b331-45e8-a815-509a2c956992
+  site_domain: spiffy-meerkat-dcf5e1.netlify.app
+
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
