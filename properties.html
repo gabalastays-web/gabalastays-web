@@ -8,13 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-o9N1jG8mPQbU1bG9m5YkLgpCjwk2+YXm1gY2XJZ2oEY="
-    crossorigin=""
-  />
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -38,7 +32,6 @@
     <div class="container">
       <h1 data-i18n="list.title">Kirayə evlər</h1>
 
-      <!-- Filters -->
       <form id="filters" class="filters">
         <label>
           <span data-i18n="list.filter_guests">Qonaq sayı</span>
@@ -80,7 +73,6 @@
         <button class="btn btn-ghost" type="reset" data-i18n="common.clear">Təmizlə</button>
       </form>
 
-      <!-- Split layout: list + map -->
       <div class="search-layout">
         <div class="results">
           <div id="list" class="cards cards-2 cards-3"></div>
@@ -102,17 +94,10 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/994500000000?text=Hello%20Gabala%20Stays!" class="floating-wa" aria-label="Chat on WhatsApp">WA</a>
+  <a href="https://wa.me/994555235757?text=Hello%20Gabala%20Stays!" class="floating-wa" aria-label="Chat on WhatsApp">WA</a>
 
   <script src="i18n.js"></script>
-
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-oQWQeEN6TwsyYfZPz7SgDg9H2wSk8SGc1Gf2Z8H3Lh0="
-    crossorigin=""
-  ></script>
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="app.js" defer></script>
 </body>
 </html>
