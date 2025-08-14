@@ -7,19 +7,6 @@
   <link rel="stylesheet" href="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.css">
 </head>
 <body>
-  <!-- Netlify Identity Widget (for login/logout) -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <script>
-    // Optional: Redirect to site homepage after logout
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("logout", () => {
-        document.location.href = "/";
-      });
-    }
-  </script>
 </body>
 </html>
